@@ -34,10 +34,10 @@ public class ReadingWritingApp {
 
         System.out.println();
 
-        try (FileWriter file = new FileWriter(String.valueOf(messagePath)); BufferedWriter buffer = new BufferedWriter(file)){
-            buffer.write("Someone who suffers from \"anatidaephobia\" believes that somewhere, somehow a duck or goose is constantly watching them. \n");
-            buffer.write("Elephants sing to each other, but their songs are in a frequency too low for humans to hear.\n");
-            buffer.write("Raccoons have four times more sensory cells in their paws than most mammals. This allows them to \"see\" with their hands and get images of the object they touch without even looking at them.\n");
+        try (BufferedWriter bufferedWriter= new BufferedWriter(new FileWriter(String.valueOf(messagePath)))){
+            bufferedWriter.write("Someone who suffers from \"anatidaephobia\" believes that somewhere, somehow a duck or goose is constantly watching them. \n");
+            bufferedWriter.write("Elephants sing to each other, but their songs are in a frequency too low for humans to hear.\n");
+            bufferedWriter.write("Raccoons have four times more sensory cells in their paws than most mammals. This allows them to \"see\" with their hands and get images of the object they touch without even looking at them.\n");
         } catch (IOException e){
             e.getStackTrace();
             System.out.println(e.getMessage());
