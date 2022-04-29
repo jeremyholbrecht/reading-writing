@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class ReadingWritingApp {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
         Path messagePath = Path.of("../../FromJereToPearl/message.txt");
         Path animalPath = Path.of("../../FromJereToPearl/animal.txt");
